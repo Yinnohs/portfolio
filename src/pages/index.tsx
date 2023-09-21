@@ -1,21 +1,24 @@
-import { Container , Box, Heading} from '@chakra-ui/react'
+import { Container, Box, Heading } from '@chakra-ui/react'
 
 const Page = () => {
   return (
     <Container>
-        <Box borderRadius={'md'} bg={'red.500'} mb={5} p={2.5} textAlign={'center'}>
-            Hi, I'm a fullstack developer based on Spain!
-        </Box>
-        <Box display={{md:'flex'}}>
+      <Box
+        borderRadius={'md'}
+        bg={'teal.400'}
+        mb={5}
+        p={2.5}
+        textAlign={'center'}
+      >
+        Hi, I&apos;m a fullstack developer based on Spain!
+      </Box>
+      <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}></Box>
-        <Heading as="h2" variant={"page-tittle"}>
-            Jose Ignacio Soto Leon
+        <Heading as="h2" variant={'page-tittle'}>
+          Jose Ignacio Soto Leon / yinnohs
         </Heading>
-        <Heading as="h3" variant={"page-tittle"}>
-            yinnohs
-        </Heading>
-        <p>Backend oriented fullstack Developer</p>
-        </Box>
+        <p>Fullstack Developer ( 🧑‍💻Developer / 🎨UX/UI Designer / 🧪Tester )</p>
+      </Box>
     </Container>
   )
 }
