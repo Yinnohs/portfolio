@@ -40,7 +40,7 @@ const Navbar = props => {
       position={'fixed'}
       as="nav"
       w={'100%'}
-      bg={useColorModeValue('#ffffff40', '#202023')}
+      bg={useColorModeValue('#f0e0cb', '#202023')}
       style={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
       {...props}
@@ -88,6 +88,7 @@ const Navbar = props => {
                 icon={<HamburgerIcon />}
                 variant={'outline'}
                 aria-label="Options"
+                borderColor={useColorModeValue('#f0e0cb', '#202023')}
               />
               <MenuList>
                 <MenuItem as={NextLink} href={'/'} passHref>
