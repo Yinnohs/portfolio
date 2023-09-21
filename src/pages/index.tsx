@@ -3,8 +3,14 @@ import {
   Box,
   Heading,
   Image,
-  useColorModeValue
+  useColorModeValue,
+  Link,
+  Button
 } from '@chakra-ui/react'
+import Section from '../components/Section'
+import { Paragraph } from '../components/Paragraph'
+import NextLink from 'next/link'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Page = () => {
   return (
@@ -40,8 +46,8 @@ const Page = () => {
         >
           <Image
             alt="profile photo of yinnohs"
-            borderColor={'whiteAlpha.800'}
-            borderWidth={4}
+            borderColor={useColorModeValue('blackAlpha.600', 'whiteAlpha.800')}
+            borderWidth={2}
             borderStyle={'solid'}
             maxWidth={'110px'}
             display={'inline-block'}
@@ -50,6 +56,31 @@ const Page = () => {
           />
         </Box>
       </Box>
+      <Section delay={'0.1'}>
+        <Heading as={'h3'} variant={'section-title'}>
+          Projects
+        </Heading>
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est
+          earum modi ad quibusdam voluptatibus, soluta nam voluptatem quaerat?
+          Officia non explicabo nostrum perferendis quo quaerat accusamus totam!
+          Natus, quos?{' '}
+          <Link as={NextLink} href="/projects/oathserver">
+            Oath Server
+          </Link>
+        </Paragraph>
+        <Box
+          display={{ md: 'flex', sm: 'flex' }}
+          my={4}
+          justifyContent={'center'}
+        >
+          <Link as={NextLink} href="/projects">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              Check My Work
+            </Button>
+          </Link>
+        </Box>
+      </Section>
     </Container>
   )
 }
