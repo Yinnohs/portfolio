@@ -11,13 +11,14 @@ import Section from '../components/Section'
 import { Paragraph } from '../components/Paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { BioAccent, BioSection, BioYear } from '../components/BioSection'
 
 const Page = () => {
   return (
     <Container>
       <Box
         borderRadius={'md'}
-        bg={useColorModeValue('whiteAlpha.300', 'whiteAlpha.50')}
+        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.50')}
         mb={5}
         p={2.5}
         textAlign={'center'}
@@ -49,7 +50,7 @@ const Page = () => {
             borderColor={useColorModeValue('blackAlpha.600', 'whiteAlpha.800')}
             borderWidth={2}
             borderStyle={'solid'}
-            maxWidth={'110px'}
+            maxWidth={'100px'}
             display={'inline-block'}
             borderRadius={'full'}
             src="/images/yinnoh.png"
@@ -80,6 +81,35 @@ const Page = () => {
             </Button>
           </Link>
         </Box>
+      </Section>
+
+      <Section delay={'0.3'}>
+        <Heading as="h3" variant="section-title">
+          Work Experience
+        </Heading>
+        {/* ----------------------------------------------------- */}
+
+        <BioSection>
+          <BioYear>04-2023</BioYear>
+          Working as a software developer / Java developer in{' '}
+          <BioAccent>Bitbox.</BioAccent>
+        </BioSection>
+        {/* ----------------------------------------------------- */}
+
+        <BioSection>
+          <BioYear>01-2023</BioYear>
+          Worked as a QA / tester for the company <BioAccent>
+            {' '}
+            TECH{' '}
+          </BioAccent>{' '}
+          using C# and typescript.
+        </BioSection>
+
+        <BioSection>
+          <BioYear>02-2022</BioYear>
+          Worked as a backend developer at <BioAccent>Itop</BioAccent> using
+          typescript and next.
+        </BioSection>
       </Section>
     </Container>
   )
