@@ -19,6 +19,7 @@ const projects = () => {
           >
             An proper oauthy Server
           </ProjectGridItem>
+          {/* TODO: add more projects inside */}
         </Section>
       </SimpleGrid>
     </Container>
