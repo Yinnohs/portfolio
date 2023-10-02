@@ -50,7 +50,7 @@ export const VoxelModel = () => {
         20 * Math.cos(0.2 * Math.PI)
       )
 
-      const scaleH = scH * 0.005 + 4.8
+      const scaleH = scH * 0.001 + 4.8
       const camera = new THREE.OrthographicCamera(
         -scaleH,
         scaleH,
@@ -63,13 +63,11 @@ export const VoxelModel = () => {
       camera.lookAt(target)
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
-      ambientLight.position.set(1, 1, 1)
-      ambientLight.castShadow = true
       scene.add(ambientLight)
 
-      const directionalLight = new THREE.DirectionalLight(0xffffff, 1) // Adjust color and intensity
-      directionalLight.position.set(1, 1, 1)
-      scene.add(directionalLight)
+      // const directionalLight = new THREE.DirectionalLight(0xffffff, 1) // Adjust color and intensity
+      // directionalLight.position.set(1, 1, 1)
+      // scene.add(directionalLight)
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true

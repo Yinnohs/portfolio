@@ -17,12 +17,11 @@ export const VoxelContainer = forwardRef<any, any>(({ children }, ref) => {
   return (
     <Box
       ref={ref}
-      className="voxel-dog"
+      className="voxel-model"
       m="auto"
-      mt={['-20px', '-60px', '-120px']}
-      mb={['-40px', '-140px', '-200px']}
-      w={[280, 480, 640]}
-      h={[280, 480, 640]}
+      my={['-40px', '-50px', '-60px']}
+      w={[280, 480, 480]}
+      h={[280, 480, 480]}
       position="relative"
     >
       {children}
